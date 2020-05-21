@@ -1,0 +1,321 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+  .menu
+    width: 630px
+    li
+      a
+        font-size: 12px
+
+  .container
+    width: 100%
+
+  .main
+    .container
+      h1
+        font-size: 50px
+      h2
+        font-size: 40px
+        text-align: center
+      p
+        text-align: center
+        font-size: 18px
+
+  .polyfacade
+    .container
+      .polyfacade_content
+        width: 100%
+        justify-content: space-between
+        p
+          font-size: 14px
+        .block_left
+          width: 300px
+        .block_img
+          width: 200px
+
+  .block_callback
+    .container
+      padding: 30px 50px 30px
+      .line_title
+        margin-bottom: 20px
+
+@media screen and (max-width: 1040px)
+  #texture
+    .container
+      .texture_content
+        justify-content: space-around
+
+
+@media screen and (max-width: 992px)
+  .block_callback
+    .container
+      .line_title
+        h4
+          font-size: 18px
+        span
+          margin: 0 50px
+      .block_callback_content
+        .block_img
+          width: 400px
+
+  #price
+    .container
+      .price_content
+        flex-direction: column
+        align-items: center
+        .item
+          margin-bottom: 10px
+          h4
+            font-size: 20px
+
+
+
+  #advantages .container .advantages_content
+    justify-content: space-around
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 880px)
+  .menu
+    display: none
+
+  .mobile_menu
+    display: block
+
+  .polyfacade
+    .container
+      .polyfacade_content
+        flex-direction: column
+        align-items: flex-start
+        .block_right
+          order: -2
+          width: 100%
+          margin-bottom: 20px
+        .block_left
+          width: 100%
+        .block_img
+          display: none
+
+  #about
+    .container
+      .about_content
+        flex-direction: column
+        align-items: center
+        .block_text
+          width: 100%
+          margin-top: 10px
+        .block_img
+          order: -2
+
+  #advantages
+    .container
+      ul
+        li
+          width: 50%
+          &:nth-child(2)
+            width: 50%
+
+  .block_callback
+    .container
+      .block_callback_content
+        .block_img
+          width: 300px
+        .form
+          width: 320px
+          label
+            input, textarea
+              font-size: 14px
+
+  footer
+    .container
+      .maps
+        width: 200px
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+  header
+    .header_top
+      .container
+        flex-wrap: wrap
+        h3
+          display: none
+
+  .main
+    .container
+      h1
+        font-size: 40px
+      h2
+        font-size: 30px
+      p
+        span
+          font-size: 20px
+
+  .block_callback
+    .container
+      padding: 20px 30px
+      .line_title
+        flex-direction: column
+        align-items: center
+        h4
+          margin-bottom: 10px
+        span
+          display: none
+      .block_callback_content
+        flex-direction: column
+        align-items: center
+        .form
+          width: 100%
+        .block_img
+          width: 100%
+          display: flex
+          align-items: center
+          justify-content: center
+          margin-top: 20px
+
+  .project_gallery
+    width: 25%
+    height: 200px
+
+@media screen and (max-width: 700px)
+  footer
+    .container
+      .maps
+        display: none
+
+  .project_gallery
+    width: 33%
+
+
+@media screen and (max-width: 550px)
+  #advantages
+    .container
+      ul
+        flex-direction: column
+        align-items: flex-start
+        li
+          width: 100%
+          &:nth-child(2)
+            width: 100%
+
+  .partner-box, .project_gallery
+    width: 50%
+
+
+
+
+@media screen and (max-width: 500px)
+  #advantages
+    .container
+      .advantages_content
+        width: 100%
+        flex-direction: column
+        align-items: center
+        .item
+          width: 100%
+          h3
+            max-width: 100%
+
+
+
+
+  footer
+    .container
+      .footer_contacts
+        a
+          font-size: 14px
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+  .logo
+    width: 150px
+
+  .title
+    font-size: 26px
+    margin-bottom: 15px
+
+  p
+    font-size: 14px
+
+  #about
+    .container
+      .about_content
+        .block_img
+          width: 100%
+
+  #price
+    .container
+      .price_content
+        .item
+          flex-direction: column
+          align-items: center
+          h4
+            margin: 10px 0 0 0
+
+  .overlayMenu
+    bottom: 45vw
+
+
+@media screen and (max-width: 440px)
+  #texture
+    .container
+      .texture_content
+        width: 100%
+        flex-direction: column
+        align-items: center
+        .item
+          width: 100%
+
+@media only screen and (max-width : 380px)
+  header
+    .header_top
+      .container
+        flex-direction: column
+        align-items: center
+
+  .block_contacts
+    align-items: center
+    margin-top: 10px
+
+  footer
+    .container
+      flex-direction: column
+      .logo
+        margin-bottom: 20px
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+
+  .project_gallery
+    height: 160px
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+

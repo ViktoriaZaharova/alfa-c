@@ -1,0 +1,1192 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+//css reset
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+body
+  line-height: 1
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote
+  &:before, &:after
+    content: ''
+    content: none
+
+q
+  &:before, &:after
+    content: ''
+    content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #fff
+
+body input:required:valid,
+body textarea:required:valid
+  color: #fff
+
+html, body
+  overflow-x: hidden
+
+body
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font:
+    weight: 300
+    size: 16px
+    family: $default-font
+  color: $text
+
+
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+
+a, input, textarea, button
+  outline: none
+  text-decoration: none
+  border: none
+  transition: .25s ease
+  cursor: pointer
+
+.text-center
+  text-align: center
+
+::selection
+  background-color: $accent
+  color: #fff
+
+.container
+  position: relative
+  width: 1170px
+  display: flex
+  padding: 0 15px
+  box-sizing: border-box
+  margin: 0 auto
+
+//title
+.title
+  font:
+    size: 36px
+    weight: 300
+  color: #000
+  margin-bottom: 30px
+  width: 100%
+  text-align: center
+
+//button
+.btn
+  color: #ffffff
+  border: 3px solid $accent
+  padding: 7px 15px
+  text-transform: uppercase
+  font:
+    size: 14px
+    family: "Circle-Light", sans-serif
+  transition: .3s ease
+  box-sizing: border-box
+
+  &:hover
+    background: #cbbb00
+
+.fa
+  font-family: 'fontawesome', sans-serif
+
+.logo
+  font-size: 30px
+  font-weight: 900
+  color: $text
+
+.block_contacts
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: flex-start
+
+  a
+    color: #474747
+    font-weight: 500
+    margin-bottom: 16px
+
+    &:last-child
+      margin-bottom: 0
+
+    &:hover
+      color: $accent
+
+    span
+      margin: 0 10px 0 0
+
+//menu
+.mobile_menu
+  display: none
+  z-index: 999
+
+.menu
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+  width: 800px
+  height: 100%
+
+  li
+    flex: auto
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100%
+
+    a
+      width: 100%
+      padding: 14px 0
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 100%
+      color: #ffffff
+      text-transform: uppercase
+      font:
+        size: 13px
+      border:
+        top: 5px solid transparent
+        bottom: 5px solid transparent
+      box-sizing: border-box
+
+      &:hover
+        border:
+          bottom-color: $accent
+
+    .active
+      border:
+        top: 5px solid transparent
+        bottom: 5px solid $accent
+
+
+//header
+header
+  display: flex
+  flex-direction: column
+
+  .header_top
+    background: #ffffff
+
+    .container
+      padding: 17px 15px 12px
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+
+      h3
+        text-align: center
+        text-transform: uppercase
+        font:
+          size: 22px
+          weight: 400
+        color: #000000
+
+  .header_menu
+    background: $bg
+
+    .container
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      flex-wrap: wrap
+
+header.fixed
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 1000
+
+
+//section main
+.main
+  background: url("../img/bg.jpg") no-repeat center
+    size: cover
+  min-height: 535px
+  position: relative
+
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    opacity: .6
+    background: #000
+    width: 100%
+    height: 100%
+
+  .container
+    padding: 38px 15px 0
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    h1
+      font:
+        weight: 700
+        size: 50px
+      color: $accent
+      text-transform: uppercase
+      border-bottom: 3px solid rgba(255, 255, 255, 0.36)
+      width: 100%
+      text-align: center
+      padding-bottom: 10px
+      margin-bottom: 17px
+
+    p
+      font:
+        weight: 500
+        size: 22px
+      text-transform: uppercase
+      color: #fff
+      margin-top: 8px
+
+    .bottom
+      font:
+        style: italic
+      border-bottom: 2px solid rgba(255, 255, 255, 0.36)
+
+//section polyfacade
+.polyfacade, #about, #advantages, #price, #texture, #decor_stone, #project
+  background: #ffffff
+
+  .container
+    padding: 35px 15px 40px
+    flex-direction: column
+    align-items: flex-start
+    flex-wrap: wrap
+
+    .polyfacade_content
+      display: flex
+      flex-direction: row
+      align-items: flex-start
+      flex-wrap: wrap
+      margin: 30px 0
+
+      .block_left
+        width: 386px
+        border-bottom: 1px solid $text
+        padding-bottom: 10px
+
+      .block_img
+        width: 330px
+        display: flex
+        align-items: center
+        justify-content: center
+        margin: 0 20px
+
+      .block_right
+        width: 293px
+        border-bottom: 1px solid $text
+        padding-bottom: 10px
+
+//section about
+#about
+  .container
+    p
+      margin-bottom: 10px
+      font-size: 16px
+      line-height: 1.8
+
+      &:last-child
+        margin-bottom: 0
+
+    a
+      color: #000
+      font-weight: 500
+
+//section advantages
+#advantages
+  .container
+    ul
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+
+      li
+        width: 30%
+        margin: 0 0 10px 0
+        font-size: 16px
+
+        &:nth-child(2)
+          width: 40%
+
+    .advantages_content
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      flex-wrap: wrap
+      align-items: flex-start
+      margin-top: 20px
+
+      .item
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 22%
+        margin-bottom: 40px
+
+        .block_icon
+          display: flex
+          align-items: center
+          justify-content: center
+          margin-bottom: 20px
+          width: 100px
+          height: 100px
+          border: 1px solid #313131
+            radius: 50%
+          padding: 20px
+
+          img
+            opacity: .5
+
+        h3
+          text-transform: uppercase
+          text-align: center
+          font:
+            size: 18px
+          color: #313131
+
+//section block_callback          
+.block_callback
+  .container
+    background: #3d3d3d
+    padding: 55px 110px 25px
+    color: #ffffff
+    flex-direction: column
+
+    .line_title
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      flex-wrap: wrap
+      margin-bottom: 34px
+
+      h4
+        font:
+          size: 24px
+          weight: 500
+        text-transform: uppercase
+
+      span
+        margin: 0 100px
+        transform: rotate(-90deg)
+
+    p
+      text-align: center
+      margin-bottom: 28px
+
+    .block_callback_content
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      flex-wrap: wrap
+      margin-bottom: 15px
+
+      .block_img
+        width: 503px
+
+    .link_project
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: flex-end
+
+      a
+        color: #000
+        text-transform: uppercase
+        font:
+          weight: 300
+          size: 14px
+        background: #ffffff
+        width: 195px
+        height: 45px
+        display: flex
+        align-items: center
+        justify-content: center
+        position: relative
+        margin-right: 16px
+
+        &:hover
+          background: $accent
+          color: #ffffff
+//form
+.form
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  width: 360px
+
+  label
+    width: 100%
+    margin-bottom: 20px
+
+    input
+      padding: 0 0 10px 15px
+      box-sizing: border-box
+      width: 100%
+      border: none
+        bottom: 1px solid #000000
+      background: transparent
+      color: #ffffff
+      font:
+        weight: 100
+        size: 16px
+
+    *::-webkit-input-placeholder
+      color: #ffffff
+
+    *:-moz-placeholder
+      color: #ffffff
+
+    *::-moz-placeholder
+      color: #ffffff
+
+    *:-ms-input-placeholder
+      color: #ffffff
+
+  button
+    border: 3px solid #ffffff
+    display: flex
+    align-items: center
+    justify-content: center
+    color: #ffffff
+    text-transform: uppercase
+    width: 195px
+    height: 45px
+    background: transparent
+    margin-top: 20px
+    font:
+      size: 16px
+      weight: 500
+
+    &:hover
+      border-color: $accent
+      color: $accent
+
+//section price
+#price
+  .container
+    .price_content
+      display: flex
+      flex-direction: row
+      align-items: flex-start
+      justify-content: space-between
+      flex-wrap: wrap
+      margin-top: 40px
+      width: 100%
+
+      .item
+        display: flex
+        flex-direction: row
+        align-items: center
+
+        h4
+          text-transform: uppercase
+          font:
+            weight: 500
+            size: 24px
+          color: #313131
+          margin-left: 38px
+
+//section texture
+#texture
+  .container
+    .texture_content
+      margin-top: 20px
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      align-items: flex-start
+      justify-content: space-between
+
+      .item
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 200px
+        margin-bottom: 40px
+
+        .block_img
+          height: 170px
+
+          img
+            max-height: 100%
+            width: auto
+
+        .btn
+          margin-top: 20px
+          color: #000000
+
+//decor_stone, project
+#project
+  .container
+    .project_content
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      flex-wrap: wrap
+      margin-top: 30px
+      width: 100%
+
+
+.project_gallery
+  width: 20%
+  height: 200px
+  overflow: hidden
+  display: flex
+  align-items: center
+  justify-content: center
+  position: relative
+  border: 3px solid transparent
+  box-sizing: border-box
+
+  &:hover
+    border-color: $accent
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .5)
+
+    .icon
+      opacity: 0
+      visibility: hidden
+
+  img
+    width: 100%
+    min-height: 100%
+
+  .icon
+    position: absolute
+    bottom: 10px
+    right: 10px
+    width: 28px
+    height: 28px
+    background: $accent
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: .3s ease
+
+    .fa
+      color: #fff
+      font-size: 12px
+
+//footer
+footer
+  background: $bg
+
+  .container
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    padding: 20px 15px
+
+    .maps
+      width: 400px
+      height: 150px
+
+    .footer_contacts
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+
+      a
+        color: #ffffff
+        margin-bottom: 20px
+        display: flex
+        flex-direction: row
+        align-items: center
+
+        &:hover
+          color: $accent
+
+        img
+          margin-right: 10px
+
+        &:last-child
+          margin-bottom: 0
+
+  .logo
+    color: $accent
+
+//modal form
+.modal_div
+  width: 300px
+  height: 400px
+  position: fixed
+  top: 45%
+  left: 50%
+  margin-top: -200px
+  margin-left: -150px
+  display: none
+  opacity: 0
+  z-index: 5
+  padding: 20px
+  background: $bg
+  box-sizing: border-box
+
+  .modal_close
+    width: 21px
+    height: 21px
+    position: absolute
+    top: 10px
+    right: 10px
+    cursor: pointer
+    display: block
+    color: $accent
+
+  h3
+    color: #fff
+    font:
+      weight: 500
+      size: 22px
+    margin-bottom: 10px
+    text-align: center
+
+  p
+    font-size: 14px
+    margin-bottom: 20px
+    text-align: center
+    color: #fff
+
+  form
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+
+    label
+      input
+        font-size: 14px
+
+/* Пoдлoжкa
+#overlay
+  z-index: 3
+  position: fixed
+  background-color: #000
+  opacity: 0.8
+  -moz-opacity: 0.8
+  filter: alpha(opacity=80)
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  cursor: pointer
+  display: none
+
+
+.top
+  position: fixed
+  bottom: 20px
+  right: 20px
+  background: $accent
+  width: 40px
+  height: 40px
+  border: 2px solid #ffffff
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  z-index: 2
+  transition: .3s ease
+
+  &:hover
+    background: $text
+
+  .fa
+    color: #ffffff
+    font-size: 20px
+
+//анимация мобильного меню
+.navBurger
+  position: relative
+  margin: 20px 0
+  cursor: pointer
+  background: #fff
+  box-sizing: border-box
+  background-clip: content-box
+  width: 30px
+  height: 24px
+  border-top: 11px solid transparent
+  border-bottom: 11px solid transparent
+  -webkit-transform: rotate(0deg)
+  transform: rotate(0deg)
+  -webkit-transition: all 0.25s ease-in-out
+  transition: all 0.25s ease-in-out
+
+  &:before,
+  &:after
+    content: ""
+    position: absolute
+    background: #fff
+    height: 2px
+    width: 100%
+    right: 0
+    will-change: rotate
+    -webkit-transform: rotate(0deg)
+    transform: rotate(0deg)
+    -webkit-transition: all 0.5s ease
+    transition: all 0.5s ease
+
+  &:before
+    top: -10px
+
+  &:after
+    bottom: -10px
+    width: 90%
+
+  &.active
+    background: transparent
+    background-clip: content-box
+    position: fixed
+    top: 0
+
+  &.active:before
+    -webkit-transform: rotate(135deg)
+    transform: rotate(135deg)
+    top: 0
+    background: #fff
+    width: 110%
+
+  &.active:after
+    bottom: 0
+    -webkit-transform: rotate(-135deg)
+    transform: rotate(-135deg)
+    background: #fff
+    width: 110%
+
+.overlay
+  position: fixed
+  background: #2a3140
+  top: 0
+  right: 0
+  width: 100%
+  height: 100%
+  opacity: 0
+  transform-origin: right top
+  transform: scale(0)
+  visibility: hidden
+  transition: all 0.4s ease-in-out
+  overflow: hidden
+  //z-index: 999
+  &.open
+    opacity: 0.99
+    visibility: visible
+    transform: scale(1)
+
+    li
+      display: block
+      animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards
+      animation-delay: 0.4s
+      transform: rotate(-7deg)
+      transform-origin: right bottom
+
+      &:nth-of-type(2)
+        animation-delay: 0.5s
+
+      &:nth-of-type(3)
+        animation-delay: 0.6s
+
+      &:nth-of-type(4)
+        animation-delay: 0.7s
+
+      &:nth-of-type(5)
+        animation-delay: 0.8s
+
+      &:nth-child(6)
+        animation-delay: 0.9s
+
+.overlayMenu
+  position: absolute
+  text-align: left
+  left: 7vw
+  bottom: 20vw
+
+  ul
+    list-style: none
+    padding: 0
+    margin: 0 auto
+    display: block
+    position: relative
+    height: 100%
+
+    li
+      display: block
+      position: relative
+      opacity: 0
+      width: 100%
+
+      a
+        display: inline-block
+        border: 1px solid rgba(255, 255, 255, 0.09)
+        color: #fff
+        text-decoration: none
+        font-size: 20px
+        padding: 10px 30px
+        margin: 5px 0
+        transition: 0.2s
+
+        &:hover,
+        &:active,
+        &:focus
+          transform: translateX(-2px)
+          padding-left: 80px
+          outline: 1px solid rgba(255, 255, 255, 0.3)
+          background: rgba(255, 255, 255, 0.03)
+
+.locked
+  overflow: hidden
+
+@keyframes fadeInRight
+  0%
+    opacity: 0
+    left: 50px
+  100%
+    opacity: 1
+    left: 0
+    transform: rotate(0deg)
+
+
+//анимированная трубка
+#popup__toggle
+  bottom: 45px
+  right: 5px
+  position: fixed
+  z-index: 2
+
+.img-circle
+  background-color: #29AEE3
+  box-sizing: content-box
+  -webkit-box-sizing: content-box
+
+.circlephone
+  box-sizing: content-box
+  -webkit-box-sizing: content-box
+  border: 2px solid #29AEE3
+  width: 150px
+  height: 150px
+  bottom: -25px
+  right: 10px
+  position: absolute
+  -webkit-border-radius: 100%
+  -moz-border-radius: 100%
+  border-radius: 100%
+  opacity: 1
+  -webkit-animation: circle-anim 2.4s infinite ease-in-out !important
+  -moz-animation: circle-anim 2.4s infinite ease-in-out !important
+  -ms-animation: circle-anim 2.4s infinite ease-in-out !important
+  -o-animation: circle-anim 2.4s infinite ease-in-out !important
+  animation: circle-anim 2.4s infinite ease-in-out !important
+  -webkit-transition: all .5s
+  -moz-transition: all .5s
+  -o-transition: all .5s
+  transition: all 0.5s
+
+.circle-fill
+  box-sizing: content-box
+  -webkit-box-sizing: content-box
+  background-color: #29AEE3
+  width: 100px
+  height: 100px
+  bottom: 0px
+  right: 35px
+  position: absolute
+  -webkit-border-radius: 100%
+  -moz-border-radius: 100%
+  border-radius: 100%
+  border: 2px solid transparent
+  -webkit-animation: circle-fill-anim 2.3s infinite ease-in-out
+  -moz-animation: circle-fill-anim 2.3s infinite ease-in-out
+  -ms-animation: circle-fill-anim 2.3s infinite ease-in-out
+  -o-animation: circle-fill-anim 2.3s infinite ease-in-out
+  animation: circle-fill-anim 2.3s infinite ease-in-out
+  -webkit-transition: all .5s
+  -moz-transition: all .5s
+  -o-transition: all .5s
+  transition: all 0.5s
+
+.img-circle
+  box-sizing: content-box
+  -webkit-box-sizing: content-box
+  width: 72px
+  height: 72px
+  bottom: 14px
+  right: 49px
+  position: absolute
+  -webkit-border-radius: 100%
+  -moz-border-radius: 100%
+  border-radius: 100%
+  border: 2px solid transparent
+  opacity: 1
+
+.img-circleblock
+  box-sizing: content-box
+  -webkit-box-sizing: content-box
+  width: 72px
+  height: 72px
+  background: url('../img/mini.png') no-repeat center
+  animation-name: tossing
+  -webkit-animation-name: tossing
+  animation-duration: 1.5s
+  -webkit-animation-duration: 1.5s
+  animation-iteration-count: infinite
+  -webkit-animation-iteration-count: infinite
+
+.img-circle:hover
+  opacity: 1
+
+@keyframes pulse
+  0%
+    transform: scale(0.9)
+    opacity: 1
+
+  50%
+    transform: scale(1)
+    opacity: 1
+
+  100%
+    transform: scale(0.9)
+    opacity: 1
+
+
+@-webkit-keyframes pulse
+  0%
+    -webkit-transform: scale(0.95)
+    opacity: 1
+
+  50%
+    -webkit-transform: scale(1)
+    opacity: 1
+
+  100%
+    -webkit-transform: scale(0.95)
+    opacity: 1
+
+
+@keyframes tossing
+  0%
+    transform: rotate(-8deg)
+
+  50%
+    transform: rotate(8deg)
+
+  100%
+    transform: rotate(-8deg)
+
+
+@-webkit-keyframes tossing
+  0%
+    -webkit-transform: rotate(-8deg)
+
+  50%
+    -webkit-transform: rotate(8deg)
+
+  100%
+    -webkit-transform: rotate(-8deg)
+
+
+@-moz-keyframes circle-anim
+  0%
+    -moz-transform: rotate(0deg) scale(0.5) skew(1deg)
+    opacity: .1
+    -moz-opacity: .1
+    -webkit-opacity: .1
+    -o-opacity: .1
+
+  30%
+    -moz-transform: rotate(0deg) scale(0.7) skew(1deg)
+    opacity: .5
+    -moz-opacity: .5
+    -webkit-opacity: .5
+    -o-opacity: .5
+
+  100%
+    -moz-transform: rotate(0deg) scale(1) skew(1deg)
+    opacity: .6
+    -moz-opacity: .6
+    -webkit-opacity: .6
+    -o-opacity: .1
+
+
+@-webkit-keyframes circle-anim
+  0%
+    -webkit-transform: rotate(0deg) scale(0.5) skew(1deg)
+    -webkit-opacity: .1
+
+  30%
+    -webkit-transform: rotate(0deg) scale(0.7) skew(1deg)
+    -webkit-opacity: .5
+
+  100%
+    -webkit-transform: rotate(0deg) scale(1) skew(1deg)
+    -webkit-opacity: .1
+
+
+@-o-keyframes circle-anim
+  0%
+    -o-transform: rotate(0deg) scale(0.5) skew(1deg)
+    -o-opacity: .1
+
+  30%
+    -o-transform: rotate(0deg) scale(0.7) skew(1deg)
+    -o-opacity: .5
+
+  100%
+    -o-transform: rotate(0deg) scale(1) skew(1deg)
+    -o-opacity: .1
+
+
+@keyframes circle-anim
+  0%
+    transform: rotate(0deg) scale(0.5) skew(1deg)
+    opacity: .1
+
+  30%
+    transform: rotate(0deg) scale(0.7) skew(1deg)
+    opacity: .5
+
+  100%
+    transform: rotate(0deg) scale(1) skew(1deg)
+    opacity: .1
+
+
+@-moz-keyframes circle-fill-anim
+  0%
+    -moz-transform: rotate(0deg) scale(0.7) skew(1deg)
+    opacity: .2
+
+  50%
+    -moz-transform: rotate(0deg) -moz-scale(1) skew(1deg)
+    opacity: .2
+
+  100%
+    -moz-transform: rotate(0deg) scale(0.7) skew(1deg)
+    opacity: .2
+
+
+@-webkit-keyframes circle-fill-anim
+  0%
+    -webkit-transform: rotate(0deg) scale(0.7) skew(1deg)
+    opacity: .2
+
+  50%
+    -webkit-transform: rotate(0deg) scale(1) skew(1deg)
+    opacity: .2
+
+  100%
+    -webkit-transform: rotate(0deg) scale(0.7) skew(1deg)
+    opacity: .2
+
+
+@-o-keyframes circle-fill-anim
+  0%
+    -o-transform: rotate(0deg) scale(0.7) skew(1deg)
+    opacity: .2
+
+  50%
+    -o-transform: rotate(0deg) scale(1) skew(1deg)
+    opacity: .2
+
+  100%
+    -o-transform: rotate(0deg) scale(0.7) skew(1deg)
+    opacity: .2
+
+
+@keyframes circle-fill-anim
+  0%
+    transform: rotate(0deg) scale(0.7) skew(1deg)
+    opacity: .2
+
+  50%
+    transform: rotate(0deg) scale(1) skew(1deg)
+    opacity: .2
+
+  100%
+    transform: rotate(0deg) scale(0.7) skew(1deg)
+    opacity: .2
+
+.partner
+  .container
+    flex-wrap: wrap
+
+.partner-wrapper
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  margin: 0 auto 30px
+
+.partner-box
+  margin: 0 0 20px
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 30%
+  padding: 20px
+  max-height: 150px
+
+  img
+    height: auto
+    width: 100%
+    display: inline-block
+
+@import "media"
+// Всегда в конце
